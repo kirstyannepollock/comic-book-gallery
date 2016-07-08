@@ -30,6 +30,7 @@ namespace ComicBookGallery.Controllers
                 return HttpNotFound();
             };
 
+           
             return View(comic);
         }
 
