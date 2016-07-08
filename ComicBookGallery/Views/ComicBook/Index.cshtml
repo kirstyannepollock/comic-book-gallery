@@ -11,10 +11,13 @@
     @foreach (var comic in Model)
     {
         <div class="col-md-3">
-            <h4>@comic.DisplayText</h4>
-            <img src="/Images/@comic.CoverImageFileName"
-                 alt="@comic.DisplayText"
-                 class="img-responsive" />
+            <h4>@Html.ActionLink(comic.DisplayText, "Detail", new {id = comic.ID })</h4>
+            
+            <a href="@Url.Action("Detail", new {id = comic.ID })">
+                <img src="/Images/@comic.CoverImageFileName"
+                     alt="@comic.DisplayText"
+                     class="img-responsive" />
+            </a>
         </div>
     }
    
