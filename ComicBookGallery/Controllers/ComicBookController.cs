@@ -10,6 +10,12 @@ namespace ComicBookGallery.Controllers
 {
     public class ComicBookController : Controller
     {
+
+        public ActionResult Index()
+        {
+            return View(ComicBookRepository.GetComicBooks());
+        }
+
         public ActionResult Detail(int? iD)
         {
             if (iD == null)

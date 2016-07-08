@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ComicBookGallery.Data
 {
-    public class ComicBookRepository
+    public static class ComicBookRepository
     {
 
         private static ComicBook[] _comicBooks =
